@@ -11,5 +11,6 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
-    public DbSet<Category> Category { get; set; }
+    // The table-name 
+    public DbSet<Category> Categories { get; set; }
 }

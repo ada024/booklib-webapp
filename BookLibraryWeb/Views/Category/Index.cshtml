@@ -1,0 +1,36 @@
+@model IEnumerable<BookLibWEb.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "_Layout";
+}
+
+<h1>Index Category</h1>
+
+<table class="table table-bordered table-striped" style="width: 100%">
+    <thead>
+    <tr>
+        <th>
+            Category Name
+        </th>
+        <th>
+            Category Name
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var obj in Model)
+    {
+        <tr>
+            <td style="width: 50%;" >
+                @obj.Name
+            </td>
+            <td style="width: 30%">
+                @obj.CreatedDateTime
+            </td>
+        </tr>
+    }
+
+    </tbody>
+
+</table>
