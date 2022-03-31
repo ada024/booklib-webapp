@@ -12,7 +12,7 @@
         </div>
         <div class="col-6 text-end">
             <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
-               <i class="bi bi-plus-circle"></i>&nbsp; Create New Category
+                <i class="bi bi-plus-circle"></i>&nbsp; Create New Category
             </a>
         </div>
     </div>
@@ -25,8 +25,9 @@
                 Category Name
             </th>
             <th>
-                Category Name
+                Category Order
             </th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -38,6 +39,14 @@
                 </td>
                 <td style="width: 30%">
                     @obj.CreatedDateTime
+                </td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id"
+                           class="btn btn-primary mx-2">
+                            <i class="bi bi-pencil-fill"></i> Edit
+                        </a>
+                    </div>
                 </td>
             </tr>
         }
